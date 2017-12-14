@@ -178,7 +178,7 @@ Hamburger
 .side-hamburger a {
   float: left;
   display: inline-block;
-  margin: -39px 16px;
+  margin: -39px 10px;
   padding: 0;
   font-weight: 700;
   font-size: 1.2em;
@@ -186,7 +186,7 @@ Hamburger
 }
 
 .mobile{
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .side-hamburger li {
