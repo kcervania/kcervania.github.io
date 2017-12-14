@@ -176,7 +176,7 @@ Hamburger
 }
 
 .side-hamburger a {
-  margin: 40px 40px;
+  margin: 20px 40px;
   font-weight: 700;
   font-size: 1.5em;
   color: #fff;
@@ -184,7 +184,7 @@ Hamburger
 
 .side-hamburger li {
   font-weight: 700;
-  display: inline-block;
+  display: block;
   float: left;
   padding: 20px 0;
 
