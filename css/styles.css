@@ -218,6 +218,7 @@ body button {
     background: transparent;
     border: none;
     text-decoration: none;
+    outline: none;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -226,7 +227,7 @@ Hero
 header .hero {
   height: 500px;
   width: 100%;
-  background: 
+  background:
   url("../images/hero.jpg");
   background-size: cover;
   background-position: 20% 30%;
