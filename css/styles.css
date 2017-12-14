@@ -176,7 +176,7 @@ Hamburger
 }
 
 .side-hamburger a {
-  float: right;
+  float: left;
   display: block;
   margin: 20px 50px;
   font-weight: 700;
