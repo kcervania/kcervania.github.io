@@ -184,8 +184,8 @@ Hamburger
 
 .side-hamburger li {
   font-weight: 700;
-  display: block;
-  float: right;
+  display: inline-block;
+  float: left;
   padding: 20px 0;
 
 }
