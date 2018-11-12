@@ -13,7 +13,7 @@ body{
 
 a {
     text-decoration: none;
-    color: #fff;
+  
 }
 
 
@@ -47,7 +47,7 @@ header span {
 .backClass a{
   border: 1px solid #980a4a;
   padding 5px 10px;
-  color: #980a4a;
+  color: #980a4a ;
   font-size: 1em;
 
 }
