@@ -9,8 +9,6 @@ body{
 }
 
 
-
-
 a {
     text-decoration: none;
 }
@@ -30,6 +28,7 @@ li {
 header {
     height: 66px;
     background: #fff;
+    margin: 0 100px;
 }
 
 .logo-container{
@@ -74,9 +73,8 @@ main {
 main{
     height: 300px;
     margin: 100px;
-    color: #fff;
+    color: #fff !important;
     font-size: 1.3em;
-    text-shadow: 2px 2px 50px #25666b;
 }
 
 main p {
