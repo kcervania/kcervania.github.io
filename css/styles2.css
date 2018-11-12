@@ -44,7 +44,7 @@ header span {
 }
 
 
-.backClass{
+.backClass a{
   border: 1px solid #980a4a;
   padding 5px 10px;
   color: #980a4a;
