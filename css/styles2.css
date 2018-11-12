@@ -28,14 +28,12 @@ li {
 header {
     height: 66px;
     background: #fff;
-    margin: 0 100px;
+
 }
 
 .logo-container{
+  margin: 0 100px;
   padding-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 
