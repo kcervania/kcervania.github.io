@@ -44,13 +44,11 @@ header span {
 }
 
 
-@media (max-width:880px) {
-
-
-}
-
-@media (max-width:700px) {
-
+.backClass{
+  border: 1px solid #980a4a;
+  padding 5px 10px;
+  color: #980a4a;
+  font-size: 1em;
 
 }
 
