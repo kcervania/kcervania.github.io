@@ -80,6 +80,3 @@ $('.responsive').slick({
 // * * * * * * * * * * * * * * * * * * * * * * * * * * *
 //Portfolio Flyers
 // * * * * * * * * * * * * * * * * * * * * * * * * * * *
-$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
