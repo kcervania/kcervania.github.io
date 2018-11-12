@@ -69,8 +69,8 @@ h1 {
 
 .c-article__title {
   font-size: 2.8em;
-  color: #c3c313;
-  background: -webkit-linear-gradient(left, #F57170, #af474b, #F57170);
+  color: #82203b;
+  background: -webkit-linear-gradient(left, #8b274d, #ac5d83, #8b274d);
   background-size: 1600px 200px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
