@@ -4,7 +4,7 @@
 }
 
 body{
-  background: #f7cbdf;
+  background: #fff;
 }
 
 
@@ -25,7 +25,7 @@ li {
 /*-------------------------------------------*/
 header {
     height: 66px;
-    background: #96d8dc;
+    background: #fff;
 }
 
 .logo-container{
@@ -80,7 +80,7 @@ main p {
 /* ---------------------------- */
 .client1{
   height: 300px;
-  background: #62aaaf;
+  background: #980b4b;
   padding: 70px 20px;
   font-size: 2.3em;
 }
