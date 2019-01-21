@@ -237,6 +237,7 @@ header .hero {
   background:
   url("../images/hero2.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .hero .hero-content {
