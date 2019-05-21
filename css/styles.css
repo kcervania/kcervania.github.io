@@ -8,6 +8,9 @@ General Styles
 body {
     background: #fff;
 }
+.divider{
+  border-top: 1px solid #ddd;
+}
 
 .wrapper {
     width: 90%;
@@ -70,7 +73,7 @@ h1 {
 .c-article__title {
   font-size: 2.8em;
   color: #82203b;
-  background: -webkit-linear-gradient(left, #8b274d, #ac5d83, #8b274d);
+  background: -webkit-linear-gradient(left, #198eb1, #ac5d83, #198eb1);
   background-size: 1600px 200px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -238,11 +241,28 @@ header .hero {
   url("../images/hero2.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+header .heroPortfolio {
+  height: 150px;
+  width: 100%;
+  background:
+  url("../images/hero2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero .hero-content {
   margin-top: 50px;
-  width: 65%;
+  width: 50%;
+  float: right;
+}
+
+.heroPortfolio .hero-content {
+  margin-top: 50px;
+  width: 50%;
   float: right;
 }
 
@@ -274,8 +294,6 @@ header .hero {
     height: 400px;
   }
 
-
-
   .hero-content p{
     margin-bottom: 20px;
   }
@@ -286,9 +304,9 @@ header .hero {
   }
 
   .c-article__title {
-    font-size: 1.8em;
-    color: #fc3735;
-    background: -webkit-linear-gradient(left, #F57170, #af474b, #F57170);
+    font-size: 2.8em;
+    color: #82203b;
+    background: -webkit-linear-gradient(left, #198eb1, #ac5d83, #198eb1);
     background-size: 1600px 200px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -319,22 +337,15 @@ header .hero {
     }
 
 
-  .hero .hero-content {
-    margin-top: 50px;
-    width: 62%;
-    float: right;
-  }
-
-
   .c-article {
     margin-top: 1rem;
     text-align: left;
   }
 
   .c-article__title {
-    font-size: 1.1em;
-    color: #fc3735;
-    background: -webkit-linear-gradient(left, #F57170, #af474b, #F57170);
+    font-size: 2.8em;
+    color: #82203b;
+    background: -webkit-linear-gradient(left, #198eb1, #ac5d83, #198eb1);
     background-size: 1600px 200px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -355,43 +366,61 @@ header .hero {
 Projects
 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 .portfolioImg{
-  height: 500px;
-  background-size: cover;
+  height: 300px;
+  padding: 20px;
+  background-size: contain;
   background-position: center center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 auto;
+  display: block;
 }
 
-#myFlyers, #myKlaude, #myAlex, #myBagel, #myDavid, #myKaren, #myInfographics{
-  margin-top: 80px;
-  height: 280px;
-  background-size: cover;
+.portfolioImg:hover{
+  opacity: 0.7;
 }
 
-.fa-chevron-left  {
+.container {
   position: relative;
-  right: 100%;
+  display: none;
+  width:100%;
+  margin: 0 auto;
+
+  background: rgba(0, 0, 0, 0.8);
+  padding: 100px;
+ 
 }
 
-.fa-chevron-right  {
-  position: relative;
-  left: 100%;
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
 }
 
-.projectTitle {
-  line-height: 1.8em;
-  text-align: left;
+.imgProperties{
+  height: 600px;
+  
 }
 
-
-.projectImg {
-  background-size: cover;
-  height:500px;
-  width: 100%;
+#expandedImg {
+  background-size: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
-.projectDes {
-  height: 500px;
-  margin: 0;
-  padding: 10px 65px;
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 
 
@@ -399,82 +428,23 @@ Projects
 @media (max-width: 1040px){
 
   .portfolioImg{
-    height: 400px;
+    height: 200px;
     background-size: cover;
     background-position: center center;
   }
 
-  #myFlyers, #myKlaude, #myAlex, #myBagel, #myDavid, #myKaren, #myInfographics{
-    height: 200px;
-    background-size: cover;
-  }
-
-  .fa-chevron-left  {
-    position: relative;
-    right: 100%;
-  }
-
-  .fa-chevron-right  {
-    position: relative;
-    left: 100%;
-  }
-
-  .projectTitle {
-
-    line-height: 1.4em;
-    font-size: 1.1em;
-    text-align: left;
-  }
-
-  .projectDes {
-    height: 400px;
-    margin: 0;
-    padding: 10px 20px;
-  }
 
 }
 
 @media (max-width: 720px){
 
   .portfolioImg{
-    height: 200px;
+    height: 100px;
     background-size: cover;
     background-position: center center;
   }
 
-  #myFlyers, #myKlaude, #myAlex, #myBagel, #myDavid, #myKaren, #myInfographics{
-    height: 150px;
-    background-size: cover;
-  }
 
-  .projectTitle {
-    line-height: 1.3em;
-    font-size: 1em;
-    text-align: left;
-    padding: 10px 20px;
-    margin: none;
-  }
-
-  .projectDes {
-    height: 350px;
-    margin: 0;
-    padding: 10px 20px;
-  }
-
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Skillslogo
-* * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-.skillsLogo li{
-  display: inline-block;
-}
-
-.skillsLogo img{
-  background-size: contain;
-  height: 55px;
-  margin: 0 10px;
 }
 
 
@@ -484,13 +454,13 @@ Main
 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 main {
   margin-bottom: 50px;
-  background: #fff;
   text-align: center;
+ 
 }
 
 
 main .steps-text {
-  margin-top: 10px;
+  margin: 20px 0 ;
   padding: 10px 20px 0;
   text-align: center;
 }
@@ -518,251 +488,23 @@ main i:hover {
 }
 
 main .about {
-  background: #222;
-  color: #fff;
+  background: url("../images/about-img.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 50px 65px;
-  line-height: 1.8em;
   margin: 0;
+  text-align: left;
 }
 
-.about span{
-  color: #fff;
-}
-
-.progSoft{
-  line-height: 1.8em;
-  padding: 20px 70px;
-}
-
-.portfolioTitle {
-  padding: 50px 20px;
+.about p {
+  width:60%;
+  float: right;
+  line-height: 2em;
 }
 
 
-
-.consultant {
-background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.0),
-            rgba(0, 0, 0, 0.0),
-            rgba(0, 0, 0, 0.0),
-            rgba(0, 0, 0, 0.0),
-            rgba(0, 0, 0, 0.0)),
-            url("../images/contract-consultant.jpg");
-background-size: cover;
-background-position: 100% 60%;
-height: 300px;
-padding-top: 130px;
-transition: 0.4s;
-}
-
-.consultant:hover {
-background-image: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.8)),
-            url("../images/contract-consultant.jpg");
-background-size: cover;
-background-position: 100% 98%;
-height: 300px;
-padding-top: 100px;
-}
-
-
-
-.consultant .description {
-    color: #000;
-    text-align: center;
-    font-size: 1.1em;
-    padding: 5px 60px;
-    opacity: 0;
-    transition: 0.8s;
-    transform: translateY(5px);
-}
-
-.consultant:hover .description{
-    opacity: 1;
-    padding: 5px 60px;
-    transform: translateY(0px);
-}
-
-.consultant .title {
-    color: #a70a51;
-    font-weight: 700;
-    text-align: center;
-    font-size: 2em;
-    opacity: 1;
-    transition: 0.4s;
-    transform: translateY(50px);
-}
-
-.consultant:hover .title{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.fulltime {
-background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.0),
-            rgba(0, 0, 0, 0.0),
-            rgba(197, 140, 2, 0.0),
-            rgba(197, 140, 2, 0.0),
-            rgba(197, 140, 2, 0.0)),
-            url("../images/fulltime.jpg");
-background-size: cover;
-background-position: 100% 60%;
-height: 300px;
-padding: 130px 20px;
-transition: 0.4s;
-}
-
-
-.fulltime:hover {
-background-image: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.8)),
-            url("../images/fulltime.jpg");
-background-size: cover;
-background-position: 100% 20%;
-height: 300px;
-padding-top: 100px;
-}
-
-.fulltime .description {
-    color: #000;
-    text-align: center;
-    font-size: 1.1em;
-    padding: 5px 60px;
-    opacity: 0;
-    transition: 0.8s;
-    transform: translateY(5px);
-}
-
-.fulltime:hover .description{
-    opacity: 1;
-    padding: 5px 60px;
-    transform: translateY(0px);
-}
-
-.fulltime .title {
-    color: #a70a51;
-    font-weight: 700;
-    text-align: center;
-    font-size: 2em;
-    opacity: 1;
-    transition: 0.4s;
-    transform: translateY(50px);
-}
-
-.fulltime:hover .title{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-/*------*/
-@media (max-width: 1040px) {
-  .fulltime .description {
-      color: #000;
-      text-align: center;
-      font-size: 1em;
-      padding: 5px 10px;
-      opacity: 0;
-      transition: 0.8s;
-      transform: translateY(5px);
-  }
-
-  .fulltime:hover .description{
-      font-size: 1em;
-      opacity: 1;
-      padding: 5px 10px;
-      transform: translateY(0px);
-  }
-
-
-
-  .consultant .description {
-      color: #000;
-      text-align: center;
-      font-size: 1em;
-      padding: 5px 10px;
-      opacity: 0;
-      transition: 0.8s;
-      transform: translateY(5px);
-  }
-
-  .consultant:hover .description{
-      font-size: 1em;
-      opacity: 1;
-      padding: 5px 10px;
-      transform: translateY(0px);
-  }
-
-}
-/*-------*/
-@media (max-width: 720px) {
-  .fulltime .title {
-      color: #af474b;
-      font-weight: 700;
-      text-align: center;
-      font-size: 1.8em;
-      opacity: 1;
-      transition: 0.4s;
-      transform: translateY(50px);
-    }
-
-  .fulltime .description {
-      color: #000;
-      text-align: center;
-      font-size: 1em;
-      padding: 5px 10px;
-      opacity: 0;
-      transition: 0.8s;
-      transform: translateY(5px);
-  }
-
-  .fulltime:hover .description{
-      font-size: 1em;
-      opacity: 1;
-      padding: 5px 10px;
-      transform: translateY(0px);
-  }
-
-  .consultant .title {
-      color: #af474b;
-      font-weight: 700;
-      text-align: center;
-      font-size: 1.8em;
-      opacity: 1;
-      transition: 0.4s;
-      transform: translateY(50px);
-    }
-
-  .consultant .description {
-      color: #000;
-      text-align: center;
-      font-size: 1em;
-      padding: 5px 10px;
-      opacity: 0;
-      transition: 0.8s;
-      transform: translateY(5px);
-  }
-
-  .consultant:hover .description{
-      font-size: 1em;
-      opacity: 1;
-      padding: 5px 10px;
-      transform: translateY(0px);
-  }
-
-}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1034,13 +776,12 @@ html {
 
 .testi{
   text-align: center;
+  margin: 0 20px;
 }
 
 
 .testi p{
-  font-style: italic;
-  font-size: 1em;
-  margin: 0;
+  font-size: 1.2em;
   padding: 0 10px;
 }
 
@@ -1048,6 +789,7 @@ html {
   font-size: 1em;
   font-weight: bolder;
 }
+
 
 
 .slick-dots {
@@ -1061,7 +803,7 @@ html {
   margin-right: 4px;
 }
 .slick-dots li.slick-active button {
-  background-color: black;
+  background-color: #a70a51;
 }
 .slick-dots li button {
   font: 0/0 a;
@@ -1114,7 +856,7 @@ footer li {
 
 footer .social-icon {
     padding: 0 10px;
-    color: #888;
+    color:#a70a51;
 }
 
 footer h5 {
@@ -1240,146 +982,3 @@ About
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Card
 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.card {
-    display: inline-block;
-    border-radius: 15px;
-    text-align: center;
-    height: 200px;
-    background: #555;
-    overflow: hidden;
-}
-
-.box1 {
-    height: 200px;
-    background: url("../images/recipes.jpg");
-    background-size: cover;
-    padding: 90px 18px;
-}
-
-.card:hover .box1{
-    background: linear-gradient(
-    3600deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.1)),
-    url("../images/recipes.jpg");
-    background-size: cover;
-}
-
-.box2 {
-    height: 200px;
-    background: url("../images/grocery-shopping.jpg");
-    background-size: cover;
-    padding: 90px 18px;
-}
-
-.card:hover .box2{
-    background: linear-gradient(
-    3600deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.1)),
-    url("../images/grocery-shopping.jpg");
-    background-size: cover;
-}
-
-.box3 {
-    height: 200px;
-    background: url("../images/food-prep.jpg");
-    background-position: 100% 80%;
-    background-size: cover;
-    padding: 90px 18px;
-}
-
-.card:hover .box3{
-    background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.1)),
-    url("../images/food-prep.jpg");
-    background-position: 100% 80%;
-    background-size: cover;
-}
-
-.card span {
-  font-size: 1.8em;
-  display: inline-block;
-  color: #fff;
-  font-family: "Roboto Slab", serif;
-  transition: 0.5s;
-  text-shadow: 3px 3px 5px #000;
-  text-transform: uppercase;
-  transform: translateY(-35px);
-}
-
-.card:hover span {
-  color: #fff;
-  text-shadow: 2px 2px 10px #000;
-  transform: translateY(0px);
-}
-
-.card p {
-  margin: 0;
-  font-size: 1em;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  transition: 0.5s;
-  transform: translateY(85px);
-  opacity: 0;
-}
-
-.card:hover p {
-  transform: translateY(0px);
-  text-shadow: 2px 2px 20px #000;
-  opacity: 1;
-}
-
-.box i {
-    display: block;
-    margin-top: 10px;
-}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Products
-* * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Contact
-* * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.signup-form label {
-    font-weight: bold;
-    display: block;
-}
-
-.signup-form input, .signup-form textarea {
-    padding: 10px 10px;
-    background: #ddd;
-    border: none;
-    color: #000;
-    width: 80%;
-    outline: none;
-    margin: 5px auto;
-}
-
-.signup-form textarea {
-    height:300px;
-    width: 80%;
-    margin: 10px auto;
-    resize: none;
-}
-
-.signup-form button {
-  color: #666;
-  border: 1px solid #888;
-  border-radius: 0;
-  padding: 10px 30px;
-  margin: 10px;
-  text-transform: uppercase;
-}
-
-.signup-form button:hover {
-  border: none;
-  transition: 0.5s;
-  color: #af474b;
-  padding: 10px 30px;
-  border: 1px solid #af474b;
-}
