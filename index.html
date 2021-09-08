@@ -6,7 +6,8 @@
 
       <title>Salvador Smith</title>
 
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300" rel="stylesheet">
 
@@ -749,7 +750,7 @@ Grid Measurement
  </div>
 
 
- <a class="next" onclick="plusSlides(1)">View Next Testimonial</a>
+ <a class="next" onclick="plusSlides(1)">View Testimonial</a>
  
 
 
@@ -768,13 +769,12 @@ Grid Measurement
 
       </footer>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script>
+     
 
-
-        <script >$('a').click(function(){
+        <script >
+        $('a').click(function(){
           $('html, body').animate({
-              scrollTop: $( $(this).attr('href') ).offset().top()
+              scrollTop: $( $(this).attr('href') ).offset().top
           }, 1000);
           return false;
       });
