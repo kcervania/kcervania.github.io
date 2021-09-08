@@ -17,7 +17,594 @@
 
 
         <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
-        <link rel="stylesheet" href='css/styles.css'>
+        <style>
+          /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+General Styles
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+}
+
+.divider{
+  border-top: 1px solid #ddd;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #a70a51;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #bf000e;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.backtotop {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: .8;
+  float:right;
+  display: block;
+  background: #cc0861;
+  padding: 20px 20px;
+}
+
+.backtotop .fa-chevron-up{
+  color: #fff;
+}
+
+.backtotop:hover {
+  color: #bf020e;
+  background: #222;
+}
+
+footer{
+  background: #c2c2c2;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@-webkit-keyframes animationgradienttitle {
+  0% {
+    background-position: 0 1600px;
+  }
+  100% {
+    background-position: 1600px 0;
+  }
+}
+
+@keyframes animationgradienttitle {
+  0% {
+    background-position: 0 1600px;
+  }
+  100% {
+    background-position: 1600px 0;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2{
+  font-size: 24px;
+  text-align: center;
+  color: #45494d;
+  margin: 0;
+}
+
+.c-article__header {
+  position: relative;
+}
+
+.c-article {
+  margin-top: 4rem;
+  text-align: left;
+}
+
+.c-article__title {
+  font-size: 3.6em;
+  font-weight:800;
+  color: #82203b;
+  background: -webkit-linear-gradient(left, #198eb1, #ac5d83, #198eb1);
+  background-size: 1600px 200px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: animationgradienttitle;
+          animation-name: animationgradienttitle;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.logoStyle {
+  height: 60px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+header .hero {
+  height: 500px;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)),
+  url('./images/profile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-content {
+  margin-top: 50px;
+  width: 50%;
+  float: left;
+}
+
+.heroPortfolio .hero-content {
+  margin-top: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction:column;
+}
+
+.hero-content p{
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Projects
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.portfolioImg{
+  height: 300px;
+  padding: 20px;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 100px;
+  overflow: scroll;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+#expandedImg {
+  background-size: contain;
+  margin:auto;
+  display: block;
+  height: 800px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Main
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main {
+
+  text-align: center;
+}
+
+
+main .steps-text {
+  margin: 20px 0 ;
+  padding: 10px 20px 0;
+  text-align: center;
+}
+
+main span {
+  color: #555;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+main p {
+font-family: "Roboto", sans-serif;
+font-size: 1.3em;
+color: #333;
+margin: 30px;
+}
+
+main i {
+  color: #a70a51;
+}
+
+main i:hover {
+  color: #333;
+}
+
+
+.about p {
+  width:60%;
+  float: right;
+  line-height: 2em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Portfolio
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.portfolioBox{
+  overflow: hidden;
+}
+
+
+/*Websites*/
+.portfolioBox .designportfolio{
+  background-image:linear-gradient(
+  180deg,
+  rgba(255, 255, 255, .8),
+  rgba(255, 255, 255, .8)),
+  url("./images/reports.jpg");
+  background-size: cover;
+  background-position: 100% 60%;
+  height: 300px;
+  transition: 2s;
+  transform: scale(1);
+  display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+  }
+  
+  .portfolioBox:hover .designportfolio{
+    background-image:linear-gradient(
+  180deg,
+  rgba(255, 255, 255, .9),
+  rgba(255, 255, 255, .9)),
+  url("./images/reports.jpg");
+  background-size: cover;
+  background-position: 100% 60%;
+  height: 300px;
+  transform: scale(1.1);
+  }
+  
+
+
+/*Websites*/
+.portfolioBox .uxportfolio {
+  background-image:linear-gradient(
+    180deg,
+    rgba(255, 255, 255, .7),
+    rgba(255, 255, 255, .7)),
+    url("./images/book-cover.jpg");
+background-size: cover;
+background-position: 100% 60%;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: 2s;
+transform: scale(1);
+}
+
+.portfolioBox:hover .uxportfolio{
+  background-image:linear-gradient(
+    180deg,
+    rgba(255, 255, 255, .8),
+    rgba(255, 255, 255, .8)),
+    url("./images/book-cover.jpg");
+background-size: cover;
+background-position: 100% 60%;
+height: 300px;
+transform: scale(1.1);
+}
+
+
+/* eLearning */
+.portfolioBox .learningportfolio{
+  background-image: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.7),
+  rgba(255, 255, 255, 0.7)),
+  url("./images/infographics.jpg");
+  background-size: cover;
+  background-position: 100% 60%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s;
+  transform: scale(1);
+}
+
+.portfolioBox:hover .learningportfolio{
+  background-image: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.8),
+  rgba(255, 255, 255, 0.8)),
+  url("./images/infographics.jpg");
+background-size: cover;
+background-position: 100% 60%;
+height: 300px;
+transform: scale(1.1);
+}
+
+/*Logo Design 2*/
+.portfolioBox .webportfolio{
+background-image: linear-gradient(
+180deg,
+rgba(255, 255, 255, 0.5),
+rgba(255, 255, 255, 0.5)),
+url("./images/website2.jpg");
+background-size: cover;
+background-position: 100% 60%;
+height: 300px;
+transition: 2s;
+transform: scale(1);
+display:flex;
+align-items: center;
+justify-content: center;
+}
+
+.portfolioBox:hover .webportfolio{
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)),
+    url("./images/website2.jpg");
+background-size: cover;
+background-position: 100% 60%;
+height: 300px;
+transform: scale(1.1);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Testimonials
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 10px 0 10px 0;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: relative;
+  left: 0;
+  margin: 20px 0 10px 0;
+  padding-bottom: 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #a70a51;
+}
+
+
+/* Add an italic font style to all quotes */
+q {
+  font-family: Roboto;
+  font-size:1.5em;
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+  font-size: 1em;
+  font-family: Roboto;
+}
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Footer
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+footer {
+    height: 150px;
+    background: #ddd;
+    margin: 0;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer a{
+    color: #fff;
+    font-size: .8em;
+    line-height: 2.2em;
+}
+
+footer li {
+   font-family: "Roboto", sans-serif;
+   text-transform: uppercase;
+ }
+
+ footer ul {
+   padding: 0;
+ }
+
+footer .social-icon {
+    padding: 0 10px;
+    color:#a70a51;
+}
+
+footer h5 {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: .8em;
+}
+
+footer a:hover {
+    color:#000;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Grid
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.row {
+  width: 100%;
+}
+
+.row .column {
+  float: left;
+  /* margin: 0; */
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Grid Measurement
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.small-1 { width: 8.333333333333334%; }
+.small-2 { width: 16.666666666666668%; }
+.small-3 { width: 25%; }
+.small-4 { width: 33.333333333333336%; }
+.small-5 { width: 41.66666666666667%; }
+.small-6 { width: 50.00000000000001%; }
+.small-7 { width: 58.333333333333336%; }
+.small-8 { width: 66.66666666666667%; }
+.small-9 { width: 75%; }
+.small-10 { width: 83.33333333333333%; }
+.small-11 { width: 91.66666666666667%; }
+.small-12 { width: 100%; }
+
+
+@media only screen and (min-width: 720px) {
+  .medium-1 { width: 8.333333333333334%; }
+  .medium-2 { width: 16.666666666666668%; }
+  .medium-3 { width: 25%; }
+  .medium-4 { width: 33.333333333333336%; }
+  .medium-5 { width: 41.66666666666667%; }
+  .medium-6 { width: 50.00000000000001%; }
+  .medium-7 { width: 58.333333333333336%; }
+  .medium-8 { width: 66.66666666666667%; }
+  .medium-9 { width: 75%; }
+  .medium-10 { width: 83.33333333333333%; }
+  .medium-11 { width: 91.66666666666667%; }
+  .medium-12 { width: 100%; }
+}
+
+@media only screen and (min-width: 1040px) {
+  .large-1 { width: 8.333333333333334%; }
+  .large-2 { width: 16.666666666666668%; }
+  .large-3 { width: 25%; }
+  .large-4 { width: 33.333333333333336%; }
+  .large-5 { width: 41.66666666666667%; }
+  .large-6 { width: 50.00000000000001%; }
+  .large-7 { width: 58.333333333333336%; }
+  .large-8 { width: 66.66666666666667%; }
+  .large-9 { width: 75%; }
+  .large-10 { width: 83.33333333333333%; }
+  .large-11 { width: 91.66666666666667%; }
+  .large-12 { width: 100%; }
+}
+
+
+.visible-for-small-only {
+    display: block;
+}
+
+.visible-for-medium-and-up {
+    display: none;
+}
+
+.visible-for-large-and-up {
+    display: none;
+}
+
+@media only screen and (min-width: 720px) {
+    .visible-for-small-only {
+        display: none;
+    }
+
+    .visible-for-medium-and-up {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    .visible-for-large-and-up {
+        display: block;
+    }
+}
+
+
+        </style>
 
     </head>
 
@@ -136,22 +723,22 @@
   </div>
 
   <div class="mySlides">
-    <q>Kathleen is a great person, a great person to work with and very passionate about her work. Kathleen's creativity, understanding of software, hard work and ability to converse with others produces great results.</q>
+    <q>Kathleen is a great person, a great person to work with and very passionate about her work. Kathleen's creativity, understanding of software, hard work and ability to converse with others produces great results.</q><br/>
     <span class="author">Richard Osiowy | Calgary</span>
   </div>
 
   <div class="mySlides">
-    <q>Kathleen was a dream to work with. She was quick in producing the work required taking into account samples of past work. This enabled us to turn around a professional looking report within a matter of days. I look forward to working with her again very soon.</q>
+    <q>Kathleen was a dream to work with. She was quick in producing the work required taking into account samples of past work. This enabled us to turn around a professional looking report within a matter of days. I look forward to working with her again very soon.</q><br/>
     <span class="author">Donna Hanson | Australia</span>
   </div>
 
   <div class="mySlides">
-    <q>Once again, I am very much pleased and satisfied with Kathleen's professional attitude towards delivering her work and really quality work I must say. She is a well disciplined and creative individual. Very much recommend her as a freelancer :D Thank you Kathleen!</q>
+    <q>Once again, I am very much pleased and satisfied with Kathleen's professional attitude towards delivering her work and really quality work I must say. She is a well disciplined and creative individual. Very much recommend her as a freelancer :D Thank you Kathleen!</q><br/>
     <span class="author">Sofy Rahman | Singapore</span>
   </div>
 
   <div class="mySlides">
-    <q>Kathleen is an incredibly gifted Graphic Artist and so much more. Her work ethic is incredible and her presentation of her work is impeccable. I have worked with Kathleen on numerous projects for multiple clients and she has always delivered on time and on budget. She is dependable, gifted, honest and incredibly creative. I would recommend her to all my colleagues and business clients as I truly value her work and work ethic. She is a very rare breed in today's market place.</q>
+    <q>Kathleen is an incredibly gifted Graphic Artist and so much more. Her work ethic is incredible and her presentation of her work is impeccable. I have worked with Kathleen on numerous projects for multiple clients and she has always delivered on time and on budget. She is dependable, gifted, honest and incredibly creative. I would recommend her to all my colleagues and business clients as I truly value her work and work ethic. She is a very rare breed in today's market place.</q><br/>
     <p class="author">Klaude Furlong | Ontario</p>
   </div>
  </div>
@@ -185,7 +772,38 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script>
 
 
-        <script src="js/app.js"></script>
+        <script >$('a').click(function(){
+          $('html, body').animate({
+              scrollTop: $( $(this).attr('href') ).offset().top()
+          }, 1000);
+          return false;
+      });
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+      
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+      
+        slides[slideIndex-1].style.display = "block";  
+      
+      }
+      </script>
 
 
 
