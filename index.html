@@ -44,14 +44,21 @@ li {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: #a70a51;
+.header-container{
+  display: flex;
+  flex-direction: column;
 }
 
-a:hover {
+a {
   text-decoration: none;
+  font-weight: 600;
   color: #bf000e;
+}
+
+a:hover{
+  color:#198eb1;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 html {
@@ -182,48 +189,6 @@ header .hero {
   margin-bottom: 30px;
 }
 
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Projects
-* * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.portfolioImg{
-  height: 300px;
-  padding: 20px;
-  background-size: contain;
-  background-position: center center;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 0 auto;
-  display: block;
-}
-
-.container {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 100px;
-  overflow: scroll;
-}
-
-#imgtext {
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-  font-family: Roboto, sans-serif;
-}
-
-#expandedImg {
-  background-size: contain;
-  margin:auto;
-  display: block;
-  height: 800px;
-}
 
 
 
@@ -618,8 +583,14 @@ Grid Measurement
               <div class="wrapper">
                 <div class="hero-content">
 
-                          <div class="logo-container">
+                          <div class="header-container">
                             <a href="./index.html"><img src="./images/logo.png" class="logoStyle"/></a>
+                            <div>
+                              <a style="padding:5px;" href="./designportfolio.html">Design</a>
+                              <a style="padding:5px;" href="./devportfolio.html">Development</a>
+                              <a style="padding:5px;" href="./learningportfolio.html">eLearning</a>
+                        
+                            </div>
                           </div>
 
                           <article class="c-article">
@@ -627,7 +598,7 @@ Grid Measurement
                               <h1 class="c-article__title">
                                Designer &amp; Sailor, here in B.C.</span>
                               </h1><br/>
-                              <p> The principles I live by, enjoy right now, be excited for tomorrow, work to impress yourself, less is always efficient, succeed in failures, be unprejudiced, and know the strength in diversity.</p>
+                              <p> Things I live by, enjoy right now, be excited for tomorrow, work to impress yourself, less is always efficient, succeed in failures, be unprejudiced, and know the strength in diversity.</p>
             
                             </div>
                           </article>
@@ -644,7 +615,7 @@ Grid Measurement
 <!-- Portfolio -->
 
             <div class="small-12 medium-6 large-6 column portfolioBox">
-                <a  href="portfolio.html" target="_blank">
+                <a  href="designportfolio.html" target="_blank">
                   <div class="designportfolio">
                     <h2>Love aesthetically useful
                       and clean designs?</h2>
@@ -654,7 +625,7 @@ Grid Measurement
 
 
             <div class="small-12 medium-6 large-6 column portfolioBox">
-                  <a href="portfolio.html" target="_blank">
+                  <a href="uxportfolio.html" target="_blank">
                   <div class="uxportfolio">
                     <h2>Need to lessen ux
                      cognitive load?</h2>
@@ -663,7 +634,7 @@ Grid Measurement
 
 
             <div class="small-12 medium-6 large-6 column portfolioBox">
-                <a href="https://www.cocobrooks.com" target="_blank">
+                <a href="uxportfolio.html" target="_blank">
                   <div class="webportfolio">
                     <h2>Want straight-forward and functional websites?</h2>
                 </div></a>
@@ -745,19 +716,11 @@ Grid Measurement
  </div>
 
  
-
- 
  </div>
 
 
- <a class="next" onclick="plusSlides(1)">View Testimonial</a>
+ <a class="next" onclick="plusSlides(1)">Read Next Testimonial</a>
  
-
-
-    <a href="#myNavbar"><div class="backtotop">
-  <i class="fa fa-chevron-up" aria-hidden="true"></i>
-  </div></a>
-
         </main>
 
         <footer>
@@ -772,12 +735,7 @@ Grid Measurement
      
 
         <script >
-        $('a').click(function(){
-          $('html, body').animate({
-              scrollTop: $( $(this).attr('href') ).offset().top
-          }, 1000);
-          return false;
-      });
+    
       
       var slideIndex = 1;
       showSlides(slideIndex);

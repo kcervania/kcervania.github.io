@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salvador Smith</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+        <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+        <style>
+                /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Projects
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #bf000e;
+}
+
+a:hover{
+  color:#198eb1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+.portfolioImg{
+  height: 300px;
+  padding: 20px;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 auto;
+  display: block;
+}
+
+.logoStyle{
+        height: 60px;
+}
+
+.container {
+  user-select: none;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+#expandedImg {
+  background-size: contain;
+  margin: 0 auto;
+  display: block;
+  height: 600px;
+  padding: 50px 0;
+}
+
+.closebtn{
+ background: #fff;
+ padding: 5px 10px;
+ margin: 5px;
+ position: absolute;
+ right:0;
+}
+
+.zoomContent{
+        display: flex;
+        flex-direction: column;
+}
+
+header{
+        display: flex;
+        align-items: flex-start;
+        padding: 50px 20px;
+        flex-direction: column;
+        justify-content: flex-start;
+}
+
+.media-cont{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin: 50px 0;
+}
+
+
+        </style>
+</head>
+<body>
+
+        <header>   
+                <a href="./index.html"><img src="./images/logo.png" class="logoStyle"/></a>
+                <div>
+                <a style="padding:5px;" href="./index.html">Back</a>
+                <a style="padding:5px;" href="./designportfolio.html">Design</a>
+                <a style="padding:5px;" href="./devportfolio.html">Development</a>
+                <a style="padding:5px; color:#198eb1;" href="./learningportfolio.html">eLearning</a>
+                </div>
+        </header>
+
+        <div class="container">
+              
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">Close</span>
+                <img id="expandedImg" class="imgProperties"/>
+                <div id="imgtext"></div>
+              
+         </div>
+        
+
+    <div class="media-cont">
+        <a href="images/security-Rise/index.html#/" target="_blank">  <img src="images/elearning01.png" alt="Learning platform for Upskilling Employees" class="portfolioImg"/>   </a>
+        <a href="images/ESG-Rise/index.html#/" target="_blank">  <img src="images/elearning02.png" alt="ESG Rise Course" class="portfolioImg" >   </a>
+        <a href="images/degreed-Rise/index.html#/" target="_blank"> <img src="images/elearning03.png" alt="Degreed Training Tool" class="portfolioImg"/></a>   
+    </div>
+
+    <div class="media-cont">
+        <iframe width="300" height="200" src="images/Escalation.mp4" frameborder="0" allowfullscreen name="iframe_video1"></iframe>
+        <iframe width="300" height="200" src="images/channel.mp4" frameborder="0" allowfullscreen name="iframe_video1"></iframe>
+        <iframe width="300" height="200" src="images/Offers.mp4" frameborder="0" allowfullscreen name="iframe_video1"></iframe>
+    </div>
+  
+    <script>
+            function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+
+    $(".container").click(function(){
+            $(".container").hide();
+    })
+  }
+    </script>
+</body>
+</html>
