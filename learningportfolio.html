@@ -107,6 +107,101 @@ header{
         margin: 50px 0;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Grid
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.row {
+  width: 100%;
+}
+
+.row .column {
+  float: left;
+  /* margin: 0; */
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Grid Measurement
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.small-1 { width: 8.333333333333334%; }
+.small-2 { width: 16.666666666666668%; }
+.small-3 { width: 25%; }
+.small-4 { width: 33.333333333333336%; }
+.small-5 { width: 41.66666666666667%; }
+.small-6 { width: 50.00000000000001%; }
+.small-7 { width: 58.333333333333336%; }
+.small-8 { width: 66.66666666666667%; }
+.small-9 { width: 75%; }
+.small-10 { width: 83.33333333333333%; }
+.small-11 { width: 91.66666666666667%; }
+.small-12 { width: 100%; }
+
+
+@media only screen and (min-width: 720px) {
+  .medium-1 { width: 8.333333333333334%; }
+  .medium-2 { width: 16.666666666666668%; }
+  .medium-3 { width: 25%; }
+  .medium-4 { width: 33.333333333333336%; }
+  .medium-5 { width: 41.66666666666667%; }
+  .medium-6 { width: 50.00000000000001%; }
+  .medium-7 { width: 58.333333333333336%; }
+  .medium-8 { width: 66.66666666666667%; }
+  .medium-9 { width: 75%; }
+  .medium-10 { width: 83.33333333333333%; }
+  .medium-11 { width: 91.66666666666667%; }
+  .medium-12 { width: 100%; }
+}
+
+@media only screen and (min-width: 1040px) {
+  .large-1 { width: 8.333333333333334%; }
+  .large-2 { width: 16.666666666666668%; }
+  .large-3 { width: 25%; }
+  .large-4 { width: 33.333333333333336%; }
+  .large-5 { width: 41.66666666666667%; }
+  .large-6 { width: 50.00000000000001%; }
+  .large-7 { width: 58.333333333333336%; }
+  .large-8 { width: 66.66666666666667%; }
+  .large-9 { width: 75%; }
+  .large-10 { width: 83.33333333333333%; }
+  .large-11 { width: 91.66666666666667%; }
+  .large-12 { width: 100%; }
+}
+
+
+.visible-for-small-only {
+    display: block;
+}
+
+.visible-for-medium-and-up {
+    display: none;
+}
+
+.visible-for-large-and-up {
+    display: none;
+}
+
+@media only screen and (min-width: 720px) {
+    .visible-for-small-only {
+        display: none;
+    }
+
+    .visible-for-medium-and-up {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    .visible-for-large-and-up {
+        display: block;
+    }
+}
 
         </style>
 </head>
@@ -131,11 +226,26 @@ header{
          </div>
         
 
-    <div class="media-cont">
+    <!-- <div class="media-cont">
         <a href="images/security-Rise/index.html#/" target="_blank">  <img src="images/elearning01.png" alt="Learning platform for Upskilling Employees" class="portfolioImg"/>   </a>
         <a href="images/ESG-Rise/index.html#/" target="_blank">  <img src="images/elearning02.png" alt="ESG Rise Course" class="portfolioImg" >   </a>
         <a href="images/degreed-Rise/index.html#/" target="_blank"> <img src="images/elearning03.png" alt="Degreed Training Tool" class="portfolioImg"/></a>   
+    </div> -->
+
+    <div class="row">
+        <div class="small-12 medium-6 large-4 column ">      
+                <img src="images/absorb-ux1.png" alt="Dark LMS Dashboard Design" class="portfolioImg" onclick="myFunction(this)"/>   
+        </div>
+
+        <div class="small-12 medium-6 large-4 column ">      
+                <img src="images/absorb-ux2.png" alt="LMS Design for Baking Company" class="portfolioImg" onclick="myFunction(this)"/>   
+        </div>
+
+        <div class="small-12 medium-6 large-4 column ">      
+                <img src="images/absorb-ux3.png" alt="LMS Design for Baking Company" class="portfolioImg" onclick="myFunction(this)"/>   
+        </div>
     </div>
+
 
     <div class="media-cont">
         <iframe width="300" height="200" src="images/Escalation.mp4" frameborder="0" allowfullscreen name="iframe_video1"></iframe>
