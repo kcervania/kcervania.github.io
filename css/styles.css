@@ -536,19 +536,16 @@ q {
   }
 
   .portfolios{
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width:100%;
   }
 
-  .pDesc{
-    display: none;
-  }
 
   .portfolio1, .portfolio2, .portfolio3{
-    width: 30%;
+    width: 100%;
   }
 
   .resources{
@@ -564,7 +561,6 @@ q {
 
   .portfolio1,  .portfolio2,  .portfolio3 {
     padding: 10px;
-    height: 250px;
   }
 
   .portfolio1 .pTitle,  .portfolio2 .pTitle,  .portfolio3 .pTitle   {
